@@ -14,8 +14,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(ProjectKeys.appName),
-        centerTitle: true,
+        title: const Text(
+          ProjectKeys.appName,
+        ),
       ),
       body: BlocBuilder<CryptoCubit, CryptoState>(
         builder: (context, state) {

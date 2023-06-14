@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 enum ProjectIcons {
   star,
   notification,
+  back,
 }
 
 extension GetIconData on ProjectIcons {
@@ -12,6 +13,8 @@ extension GetIconData on ProjectIcons {
         return Icons.star;
       case ProjectIcons.notification:
         return Icons.notification_add_outlined;
+      case ProjectIcons.back:
+        return Icons.arrow_back_outlined;
     }
   }
 }

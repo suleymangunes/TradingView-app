@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradingview_app/core/component/icon/crypto_icon.dart';
 import 'package:tradingview_app/core/component/text/body_large_text.dart';
 import 'package:tradingview_app/view/home/model/crypto.dart';
+import 'package:tradingview_app/view/tradingview/view/trading_page.dart';
 
 class CryptoCard extends StatelessWidget {
   const CryptoCard({
@@ -15,7 +16,18 @@ class CryptoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return TradingPage(
+                  crypto: crypto,
+                );
+              },
+            ),
+          );
+        },
         child: ListTile(
           leading: CryptoIcon(url: crypto.id.toString()),
           title: BodyLargeText(text: crypto.name.toString()),

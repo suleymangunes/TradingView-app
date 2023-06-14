@@ -9,6 +9,13 @@ class ProjectTheme {
     scaffoldBackgroundColor: ProjectColors.haiti,
     appBarTheme: AppBarTheme(
       backgroundColor: ProjectColors.haiti,
+      centerTitle: true,
+      iconTheme: IconThemeData(
+        color: ProjectColors.white,
+      ),
+      actionsIconTheme: const IconThemeData(
+        color: Colors.white,
+      ),
     ),
   );
 }

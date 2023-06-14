@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tradingview_app/core/init/theme/dark/dark_theme.dart';
+import 'package:tradingview_app/view/home/view/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -6,15 +8,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      theme: ProjectTheme().darkTheme,
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
     );
   }
 }

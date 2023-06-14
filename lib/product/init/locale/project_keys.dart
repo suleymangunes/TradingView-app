@@ -13,4 +13,6 @@ abstract class ProjectKeys {
   static String circulation(String coinName) {
     return "Circulation ($coinName)";
   }
+
+  static const error = "Error";
 }

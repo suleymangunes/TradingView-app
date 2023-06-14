@@ -6,5 +6,9 @@ class ProjectTheme {
     useMaterial3: true,
     colorSchemeSeed: ProjectColors.haiti,
     brightness: Brightness.dark,
+    scaffoldBackgroundColor: ProjectColors.haiti,
+    appBarTheme: AppBarTheme(
+      backgroundColor: ProjectColors.haiti,
+    ),
   );
 }

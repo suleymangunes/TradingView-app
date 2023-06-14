@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-extension ProjedtPads on BuildContext {
-  EdgeInsets get labelPad => const EdgeInsets.all(15);
-  EdgeInsets get indicatorPad => const EdgeInsets.only(bottom: 3);
-}
+import 'package:tradingview_app/core/constants/color/color_constant.dart';
 
 extension ScreenSize on BuildContext {
   double get width => MediaQuery.of(this).size.width;
@@ -13,7 +9,7 @@ extension ScreenSize on BuildContext {
 
 extension SizeByScreen on BuildContext {
   double get bodyHeight => height - (paddingTop + kToolbarHeight);
-  double get tradingViewWidgetHeight => height * 0.6;
+  double get tradingViewWidgetHeight => height * 0.59;
   double get quarterWidth => width * 0.25;
 }
 
@@ -22,5 +18,25 @@ extension ProjectSize on BuildContext {
 }
 
 extension SizedBoxSpaces on BuildContext {
-  SizedBox get smallHeightSize => SizedBox(height: height * 0.015);
+  SizedBox get smallHeightSize => SizedBox(height: height * 0.022);
+}
+
+extension ProjedtPads on BuildContext {
+  EdgeInsets get labelPad => const EdgeInsets.all(15);
+  EdgeInsets get indicatorPad => const EdgeInsets.only(bottom: 3);
+  EdgeInsets get smallTopPad => const EdgeInsets.only(top: 2);
+  EdgeInsets get halfVerticalSmallPad => const EdgeInsets.symmetric(vertical: 8, horizontal: 16);
+  EdgeInsets get halfVerticalxSmallPad => const EdgeInsets.symmetric(vertical: 6, horizontal: 12);
+  EdgeInsets get smallPadAll => const EdgeInsets.all(4.0);
+}
+
+extension BorderSizes on BuildContext {
+  BorderRadius get mediumCircular => BorderRadius.circular(20);
+}
+
+extension CustomTheme on BuildContext {
+  TextStyle? get poonMediumTheme => Theme.of(this).textTheme.labelMedium?.copyWith(
+        fontWeight: FontWeight.w500,
+        color: ProjectColors.spoonBearl,
+      );
 }

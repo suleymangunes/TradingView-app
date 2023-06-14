@@ -25,7 +25,7 @@ class CryptoNameDataSource {
 <script type="text/javascript">
 new TradingView.widget({
   "width": "100%",
-  "height": 1200,
+  "height": 1180,
   "symbol": "$name",
   "interval": "D",
   "timezone": "Etc/UTC",

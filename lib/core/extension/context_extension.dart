@@ -14,4 +14,13 @@ extension ScreenSize on BuildContext {
 extension SizeByScreen on BuildContext {
   double get bodyHeight => height - (paddingTop + kToolbarHeight);
   double get tradingViewWidgetHeight => height * 0.6;
+  double get quarterWidth => width * 0.25;
+}
+
+extension ProjectSize on BuildContext {
+  double get multiTextHeight => 37;
+}
+
+extension SizedBoxSpaces on BuildContext {
+  SizedBox get smallHeightSize => SizedBox(height: height * 0.015);
 }

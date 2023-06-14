@@ -19,6 +19,8 @@ class ProjectColors {
   static Color get manatee => const Color.fromRGBO(139, 141, 162, 1);
   // manatee light for unselected light item
   static Color get manateeLight => const Color.fromRGBO(137, 139, 160, 1);
+  // spoonbearl for dropdown text
+  static Color get spoonBearl => const Color.fromRGBO(171, 173, 186, 1);
   // white for text
   static Color get white => const Color.fromRGBO(255, 255, 255, 1);
   // dolly for icon

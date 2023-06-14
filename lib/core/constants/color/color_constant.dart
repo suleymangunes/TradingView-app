@@ -11,10 +11,14 @@ class ProjectColors {
 
   // haiti for background
   static Color get haiti => const Color.fromRGBO(18, 21, 54, 1);
+  // haitidark for divider
+  static Color get haitiDark => const Color.fromRGBO(13, 17, 42, 1);
   // picton blue for selectem item
   static Color get pictonBlue => const Color.fromRGBO(60, 227, 246, 1);
   // manatee for unselected item
   static Color get manatee => const Color.fromRGBO(139, 141, 162, 1);
+  // manatee light for unselected light item
+  static Color get manateeLight => const Color.fromRGBO(137, 139, 160, 1);
   // white for text
   static Color get white => const Color.fromRGBO(255, 255, 255, 1);
   // dolly for icon

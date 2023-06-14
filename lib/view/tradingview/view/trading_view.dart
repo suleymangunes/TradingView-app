@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tradingview_app/core/constants/color/color_constant.dart';
-import 'package:tradingview_app/core/enum/project_icon.dart';
-import 'package:tradingview_app/product/init/locale/project_keys.dart';
+import 'package:tradingview_app/view/_product/tabbar/trading_tabbar_constants.dart';
+import 'package:tradingview_app/view/_product/tabbar/trading_view_tabbars.dart';
+import 'package:tradingview_app/view/_product/widget/appbar/tradingview_app_bar.dart';
 import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class TradingView extends StatelessWidget {
@@ -12,116 +13,38 @@ class TradingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TradingAppBar(crypto: crypto),
-    );
-  }
-}
-
-class TradingAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const TradingAppBar({
-    super.key,
-    required this.crypto,
-  });
-  final Crypto crypto;
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      leading: const AppBarBackIconButton(),
-      title: Column(
+      body: Column(
         children: [
-          TitleMediumText(text: crypto.symbol.toString()),
-          const LabelSmallText(text: ProjectKeys.globalAverage),
+          DefaultTabController(
+            length: TabbarConstants.tabbarItems.length,
+            child: Column(
+              children: [
+                const TradingviewTabbars(),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.6,
+                  child: const TabBarView(
+                    children: [
+                      Card(
+                        color: Colors.red,
+                      ),
+                      Card(
+                        color: Colors.green,
+                      ),
+                      Card(
+                        color: Colors.yellow,
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            color: ProjectColors.haitiDark,
+            height: 8,
+            thickness: 4,
+          )
         ],
-      ),
-      actions: const [
-        AppBarNotificationIconButton(),
-        AppBarStarIconButton(),
-      ],
-    );
-  }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-}
-
-class LabelSmallText extends StatelessWidget {
-  const LabelSmallText({super.key, required this.text});
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: Theme.of(context).textTheme.labelSmall?.copyWith(
-            color: ProjectColors.manatee,
-          ),
-    );
-  }
-}
-
-class TitleMediumText extends StatelessWidget {
-  const TitleMediumText({super.key, required this.text});
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-            color: ProjectColors.white,
-          ),
-    );
-  }
-}
-
-class AppBarBackIconButton extends StatelessWidget {
-  const AppBarBackIconButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {
-        Navigator.pop(context);
-      },
-      icon: Icon(
-        ProjectIcons.back.getIconData,
-        color: ProjectColors.white,
-      ),
-    );
-  }
-}
-
-class AppBarNotificationIconButton extends StatelessWidget {
-  const AppBarNotificationIconButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {},
-      icon: Icon(
-        ProjectIcons.notification.getIconData,
-        color: ProjectColors.white,
-      ),
-    );
-  }
-}
-
-class AppBarStarIconButton extends StatelessWidget {
-  const AppBarStarIconButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {},
-      icon: Icon(
-        ProjectIcons.star.getIconData,
-        color: ProjectColors.dolly,
       ),
     );
   }

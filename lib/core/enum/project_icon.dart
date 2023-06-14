@@ -10,11 +10,11 @@ extension GetIconData on ProjectIcons {
   get getIconData {
     switch (this) {
       case ProjectIcons.star:
-        return Icons.star;
+        return Icons.star_rounded;
       case ProjectIcons.notification:
         return Icons.notification_add_outlined;
       case ProjectIcons.back:
-        return Icons.arrow_back_outlined;
+        return Icons.arrow_back_rounded;
     }
   }
 }

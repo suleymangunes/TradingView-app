@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradingview_app/core/extension/context_extension.dart';
 import 'package:tradingview_app/view/home/service/icon-service/get_icon_from_network.dart';
 
 class CryptoIcon extends StatelessWidget {
@@ -8,7 +9,7 @@ class CryptoIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 35,
+      height: context.iconMediumHeight,
       child: Image.network(
         IconNetwork().getIconToNetwork(url),
       ),

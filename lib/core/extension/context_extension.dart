@@ -15,6 +15,7 @@ extension SizeByScreen on BuildContext {
 
 extension ProjectSize on BuildContext {
   double get multiTextHeight => 37;
+  double get iconMediumHeight => 35;
 }
 
 extension SizedBoxSpaces on BuildContext {
@@ -39,4 +40,9 @@ extension CustomTheme on BuildContext {
         fontWeight: FontWeight.w500,
         color: ProjectColors.spoonBearl,
       );
+}
+
+extension DividerSize on BuildContext {
+  double get smallDividerHeight => 8;
+  double get smallDividerThickenss => 4;
 }

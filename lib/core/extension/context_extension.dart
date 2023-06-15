@@ -27,7 +27,7 @@ extension ProjedtPads on BuildContext {
   EdgeInsets get smallTopPad => const EdgeInsets.only(top: 2);
   EdgeInsets get halfVerticalSmallPad => const EdgeInsets.symmetric(vertical: 8, horizontal: 16);
   EdgeInsets get halfVerticalxSmallPad => const EdgeInsets.symmetric(vertical: 6, horizontal: 12);
-  EdgeInsets get smallPadAll => const EdgeInsets.all(4.0);
+  EdgeInsets get smallPadAll => const EdgeInsets.all(4);
 }
 
 extension BorderSizes on BuildContext {

@@ -4,8 +4,8 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 class TradingViewWidgetHtml extends StatefulWidget {
   const TradingViewWidgetHtml({
-    super.key,
     required this.cryptoName,
+    super.key,
   });
 
   final String cryptoName;
@@ -26,13 +26,13 @@ class _TradingViewWidgetHtmlState extends State<TradingViewWidgetHtml> {
       ..setNavigationDelegate(
         NavigationDelegate(
           onProgress: (int progress) {
-            debugPrint("progress");
+            debugPrint('progress');
           },
           onPageStarted: (String url) {
-            debugPrint("started");
+            debugPrint('started');
           },
           onPageFinished: (String url) {
-            debugPrint("finished");
+            debugPrint('finished');
           },
         ),
       )

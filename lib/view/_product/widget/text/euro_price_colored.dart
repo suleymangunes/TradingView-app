@@ -4,7 +4,7 @@ import 'package:tradingview_app/product/features/conversion/currency_conversion.
 import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class EurPriceColored extends StatelessWidget {
-  const EurPriceColored({super.key, required this.crypto});
+  const EurPriceColored({required this.crypto, super.key});
   final Crypto crypto;
 
   @override
@@ -13,7 +13,7 @@ class EurPriceColored extends StatelessWidget {
       CurrencyConversion().convertUsdToEuro(crypto.quote?.uSD?.price ?? 0),
       style: Theme.of(context).textTheme.headlineSmall?.copyWith(
             fontWeight: FontWeight.bold,
-            color: crypto.quote?.uSD?.percentChange24h.toString().substring(0, 1) == "-"
+            color: crypto.quote?.uSD?.percentChange24h.toString().substring(0, 1) == '-'
                 ? ProjectColors.cabaret
                 : ProjectColors.jungleGreen,
           ),

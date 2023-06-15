@@ -5,8 +5,8 @@ import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class DayVolView extends StatelessWidget {
   const DayVolView({
-    super.key,
     required this.crypto,
+    super.key,
   });
 
   final Crypto crypto;

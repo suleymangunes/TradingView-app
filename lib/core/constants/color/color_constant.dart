@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ProjectColors {
-  static final ProjectColors _projectColors = ProjectColors._internal();
-
   factory ProjectColors() {
     return _projectColors;
   }
 
   ProjectColors._internal();
+  static final ProjectColors _projectColors = ProjectColors._internal();
 
   // haiti for background
   static Color get haiti => const Color.fromRGBO(18, 21, 54, 1);

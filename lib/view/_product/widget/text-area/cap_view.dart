@@ -5,8 +5,8 @@ import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class CapView extends StatelessWidget {
   const CapView({
-    super.key,
     required this.crypto,
+    super.key,
   });
 
   final Crypto crypto;

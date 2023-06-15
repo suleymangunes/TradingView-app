@@ -8,8 +8,8 @@ import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class PriceInfo extends StatelessWidget {
   const PriceInfo({
-    super.key,
     required this.crypto,
+    super.key,
   });
 
   final Crypto crypto;
@@ -28,7 +28,7 @@ class PriceInfo extends StatelessWidget {
         ),
         Row(
           children: [
-            LabelSmallTextManatee(text: "= ${crypto.quote?.uSD?.price?.toStringAsFixed(2)} ${ProjectKeys.usd} "),
+            LabelSmallTextManatee(text: '= ${crypto.quote?.uSD?.price?.toStringAsFixed(2)} ${ProjectKeys.usd} '),
             DayPercentChangeColored(crypto: crypto),
           ],
         ),

@@ -6,8 +6,8 @@ import 'package:tradingview_app/view/tradingview/service/trading_view_html.dart'
 
 class TradingViewWidgetChart extends StatelessWidget {
   const TradingViewWidgetChart({
-    super.key,
     required this.crypto,
+    super.key,
   });
   final Crypto crypto;
 

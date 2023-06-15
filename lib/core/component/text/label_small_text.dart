@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tradingview_app/core/constants/color/color_constant.dart';
 
 class LabelSmallText extends StatelessWidget {
-  const LabelSmallText({super.key, required this.text});
+  const LabelSmallText({required this.text, super.key});
   final String text;
 
   @override

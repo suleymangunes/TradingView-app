@@ -10,8 +10,8 @@ import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class TradingViewCryptoInfoInBottom extends StatelessWidget {
   const TradingViewCryptoInfoInBottom({
-    super.key,
     required this.crypto,
+    super.key,
   });
 
   final Crypto crypto;

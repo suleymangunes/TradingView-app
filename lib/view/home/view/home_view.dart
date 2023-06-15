@@ -4,8 +4,8 @@ import 'package:tradingview_app/core/enum/base_status.dart';
 import 'package:tradingview_app/product/init/locale/project_keys.dart';
 import 'package:tradingview_app/product/widget/card/crypto_card.dart';
 import 'package:tradingview_app/view/home/model/crypto.dart';
-import 'package:tradingview_app/view/home/view-model/crypto_cubit.dart';
-import 'package:tradingview_app/view/home/view-model/crypto_state.dart';
+import 'package:tradingview_app/view/home/view-model/cubit/crypto_cubit.dart';
+import 'package:tradingview_app/view/home/view-model/cubit/crypto_state.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -38,8 +38,8 @@ class HomeView extends StatelessWidget {
 
 class CryptoList extends StatelessWidget {
   const CryptoList({
-    super.key,
     required this.data,
+    super.key,
   });
 
   final CryptoCompleted data;

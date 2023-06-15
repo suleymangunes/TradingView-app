@@ -9,8 +9,8 @@ import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class TradingAppBar extends StatelessWidget implements PreferredSizeWidget {
   const TradingAppBar({
-    super.key,
     required this.crypto,
+    super.key,
   });
   final Crypto crypto;
 

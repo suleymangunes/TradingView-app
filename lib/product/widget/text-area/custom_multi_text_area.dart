@@ -4,7 +4,11 @@ import 'package:tradingview_app/core/extension/context_extension.dart';
 import 'package:tradingview_app/product/widget/fitted/fitted_small_text.dart';
 
 class CustomMultiTextArea extends StatelessWidget {
-  const CustomMultiTextArea({super.key, required this.title, required this.description});
+  const CustomMultiTextArea({
+    required this.title,
+    required this.description,
+    super.key,
+  });
   final String title;
   final String description;
 

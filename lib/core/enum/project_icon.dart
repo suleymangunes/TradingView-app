@@ -7,7 +7,7 @@ enum ProjectIcons {
 }
 
 extension GetIconData on ProjectIcons {
-  get getIconData {
+  IconData get getIconData {
     switch (this) {
       case ProjectIcons.star:
         return Icons.star_rounded;
@@ -26,7 +26,7 @@ enum PriceChangeICons {
 }
 
 extension GetPriceIconData on PriceChangeICons {
-  get getIconData {
+  IconData get getIconData {
     switch (this) {
       case PriceChangeICons.up:
         return Icons.arrow_drop_up_outlined;

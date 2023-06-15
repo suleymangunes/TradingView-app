@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tradingview_app/view/home/service/crypto/icrypto_data_source.dart';
-import 'package:tradingview_app/view/home/view-model/crypto_state.dart';
+import 'package:tradingview_app/view/home/view-model/cubit/crypto_state.dart';
 
 class CryptoCubit extends Cubit<CryptoState> {
   CryptoCubit({required this.cryptoDataSource}) : super(CryptoInitial());

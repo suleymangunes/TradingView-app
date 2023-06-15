@@ -7,7 +7,7 @@ import 'package:tradingview_app/view/_product/widget/appbar/tradingview_app_bar.
 import 'package:tradingview_app/view/home/model/crypto.dart';
 
 class TradingView extends StatelessWidget {
-  const TradingView({super.key, required this.crypto});
+  const TradingView({required this.crypto, super.key});
   final Crypto crypto;
 
   @override

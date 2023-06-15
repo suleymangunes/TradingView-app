@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class LabelMediumText extends StatelessWidget {
-  const LabelMediumText({super.key, required this.text, this.color, this.fontWeight});
+  const LabelMediumText({
+    required this.text,
+    super.key,
+    this.color,
+    this.fontWeight,
+  });
   final String text;
   final Color? color;
   final FontWeight? fontWeight;

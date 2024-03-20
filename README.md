@@ -4,6 +4,10 @@ This app is made using Tradingview widget, Coinmarketcap api and Flutter.
 
 <img src="https://github.com/suleymangunes/TradingView-app/assets/62201710/b3bcb19d-6c1d-4c10-8780-3d0333cebaf8" width=200 hspace=20>
 
+## Usage
+
+Define your own coin market api key in `lib/view/_product/service/service/service_keys.dart` in the `coinMarketApiKey` variable.
+
 ### Application Structure
 
 #### Architecture
